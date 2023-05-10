@@ -33,12 +33,12 @@ function App() {
         setSelectedPage={setSelectedPage}
       />
       <div className="w-5/6 mx-auto md:h-full">
-        {isAboveMediumScreens && (
+        {/* {isAboveMediumScreens && (
           <DotGroup
             selectedPage={selectedPage}
             setSelectedPage={setSelectedPage}
           />
-        )}
+        )} */}
         <Landing setSelectedPage={setSelectedPage} />
         <LineGradient />
         <div className="w-5/6 mx-auto md:h-full">
