@@ -18,7 +18,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-48">
+    <section id="contact" className="">
       <motion.div
         className="grid sm:grid-cols-2 xl:grid-cols-3 gap-8"
         initial="hidden"

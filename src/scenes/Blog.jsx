@@ -1,28 +1,35 @@
 import { motion } from "framer-motion";
 import LineGradient from "../components/LineGradient";
-import hashnode from "../assets/Hashnode Bootcamp header.png";
+import hashnode from "../assets/hashnode boot.jpeg";
 import clock from "../assets/time-outline.svg";
 import abiala from "../assets/abiala-profile.jpeg";
+import promises from "../assets/promises.jpeg";
 
 const Blog = () => {
-  const Article = ({ title, description, src, duration }) => {
+  const Article = ({ title, description, src, duration, date, link }) => {
     return (
       <div className="mb-16 md:mb-0">
         <img src={src} className="w-150%" />
         <div className="pt-6">
-          <a className="font-semibold text-xl font-opensans" href="#">
+          <a
+            className="font-semibold text-xl font-opensans"
+            href={link}
+            target="_blank"
+          >
             {title}
           </a>
         </div>
 
-        <p className="text-sm text-gray-400 font-playfair pt-4">
+        <p className="text-sm text-gray-100 font-playfair pt-4">
           {description}
         </p>
         <div className="flex justify-between pt-4">
           <div className="flex items-center justify-between gap-2">
             <img src={abiala} className="w-2/8 h-10 rounded-full" />
             <p class>
-              by <span className="text-sm font-semibold">Abiala Israel</span>
+              <span className="text-sm text-gray-200 font-playfair">
+                {date}
+              </span>
             </p>
           </div>
 
@@ -52,7 +59,7 @@ const Blog = () => {
             </div>
 
             <div>
-              <p className="text-sm text-gray-500">{duration}</p>
+              <p className="text-sm text-gray-200 font-playfair">{duration}</p>
             </div>
           </div>
         </div>
@@ -104,36 +111,53 @@ const Blog = () => {
         >
           {/* ROW 1 */}
           <Article
+            className="sm:mb-24 z-20"
             src={hashnode}
             description={
-              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis sequi libero nobis at saepe tenetur."
+              "It's great to still have you here. The sessions delivered by the speakers since the beginning of the boot camp have been insightful and filled with amazing content. Leveraging the knowledge shared will make you stand out..."
             }
-            title={"Understanding Promises in JavaScript"}
-            duration={"7 min"}
+            title={"Day 3 of Hashnode Bootcamp: What I learnt ✨✨✨"}
+            duration={"4 min"}
+            date={"3rd of May, 2023"}
+            link={
+              "https://abiala.hashnode.dev/day-3-of-hashnode-bootcamp-what-i-learnt"
+            }
           />
           <Article
             src={hashnode}
             description={
-              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis sequi libero nobis at saepe tenetur."
+              "Day 2 of the boot camp resumed with so much enthusiasm. The talk was centered around creating and managing your brand. I absorbed so many details that I can't wait to implement them after the boot camp. What I noticed is..."
             }
-            title={"Understanding Promises in JavaScript"}
-            duration={"7 min"}
+            title={"Day 2 of Hashnode Bootcamp: What I learnt✨✨"}
+            duration={"6 min"}
+            date={"3rd of May, 2023"}
+            link={
+              "https://abiala.hashnode.dev/day-2-of-hashnode-bootcamp-what-i-learnt"
+            }
           />
           <Article
             src={hashnode}
             description={
-              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis sequi libero nobis at saepe tenetur."
+              "Two days ago, I was shortlisted to be among the participants of the Hashnode 3 days Technical Writing Bootcamp. I had to include it in my weekly tasks and plan in getting information on leveling up as a technical writer..."
             }
-            title={"Understanding Promises in JavaScript"}
-            duration={"7 min"}
+            title={"Day 1 of Hashnode Bootcamp: What I learnt✨"}
+            duration={"5 min"}
+            date={"1st of May, 2023"}
+            link={
+              "https://abiala.hashnode.dev/day-1-of-hashnode-bootcamp-what-i-learnt"
+            }
           />
           <Article
-            src={hashnode}
+            src={promises}
             description={
-              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis sequi libero nobis at saepe tenetur."
+              "Promises are a powerful tool in JavaScript that allows us to write asynchronous code that is more readable and easier to manage. They provide a way to handle and manage operations that may take a long time to complete..."
             }
             title={"Understanding Promises in JavaScript"}
             duration={"7 min"}
+            date={"20th of April, 2023"}
+            link={
+              "https://abiala.hashnode.dev/understanding-promises-in-javascript"
+            }
           />
         </motion.div>
       </div>

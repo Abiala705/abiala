@@ -45,15 +45,15 @@ function App() {
           <MySkills />
         </div>
         <LineGradient />
-        <div className="w-5/6 mx-auto mt-32">
+        <div className="w-5/6 mx-auto">
           <Projects />
         </div>
 
-        <div className="w-5/6 mx-auto mt-32">
+        <div className="w-5/6 mx-auto">
           <Blog />
         </div>
         <LineGradient />
-        <div className="w-5/6 mx-auto mt-32">
+        <div className="w-5/6 mx-auto mb-16">
           <Contact />
         </div>
 
