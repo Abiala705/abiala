@@ -30,7 +30,7 @@ function App() {
       <NavBar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
-        setSelectedPage={selectedPage}
+        setSelectedPage={setSelectedPage}
       />
       <div className="w-5/6 mx-auto md:h-full">
         {isAboveMediumScreens && (
@@ -45,7 +45,7 @@ function App() {
           <MySkills />
         </div>
         <LineGradient />
-        <div className="w-5/6 mx-auto">
+        <div className="w-5/6 mx-auto mt-32">
           <Projects />
         </div>
 
