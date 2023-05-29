@@ -12,7 +12,7 @@ const Blog = () => {
         <img src={src} className="w-150%" />
         <div className="pt-6">
           <a
-            className="font-semibold text-xl font-opensans"
+            className="font-semibold text-xl font-playfair"
             href={link}
             target="_blank"
           >
@@ -20,14 +20,14 @@ const Blog = () => {
           </a>
         </div>
 
-        <p className="text-sm text-gray-100 font-playfair pt-4">
+        <p className="text-sm text-gray-100 font-opensans pt-4">
           {description}
         </p>
         <div className="flex justify-between pt-4">
           <div className="flex items-center justify-between gap-2">
             <img src={abiala} className="w-2/8 h-10 rounded-full" />
             <p class>
-              <span className="text-sm text-gray-200 font-playfair">
+              <span className="text-sm text-gray-200 font-opensans">
                 {date}
               </span>
             </p>
@@ -59,7 +59,7 @@ const Blog = () => {
             </div>
 
             <div>
-              <p className="text-sm text-gray-200 font-playfair">{duration}</p>
+              <p className="text-sm text-gray-200 font-opensans">{duration}</p>
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@ const Blog = () => {
           </div>
         </div>
 
-        <p className="mt-10 mb-10">
+        <p className="mt-10 mb-10 font-opensans">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa dolores
           dolor quos veritatis molestiae voluptates.
         </p>

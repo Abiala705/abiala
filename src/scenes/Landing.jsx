@@ -13,7 +13,7 @@ const Landing = ({ setSelectedPage }) => {
       className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10"
     >
       {/* IMAGE SECTION */}
-      <div className="md:order-2 flex justify-center basis-1/2 z-10 mt-16 md:mt-32">
+      <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
         {isAboveMediumScreens ? (
           <div
             className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20
@@ -56,10 +56,9 @@ const Landing = ({ setSelectedPage }) => {
               Abiala
             </span>
           </p>
-          <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Repudiandae ut atque possimus iure dolorum nihil voluptate numquam
-            eos tempora asperiores.
+          <p className="my-16 mb-7 text-sm text-center md:text-start">
+            Frontend Developer and Technical Writer who fancies breaking down
+            complex frontend concepts into simple term through writing.
           </p>
         </motion.div>
 
@@ -76,7 +75,7 @@ const Landing = ({ setSelectedPage }) => {
           }}
         >
           <AnchorLink
-            className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
+            className="bg-gradient-to-r from-cyan-500  text-deep-blue rounded-sm py-3 px-7 font-semibold
             hover:bg-blue hover:text-white transition duration-500"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
@@ -84,11 +83,11 @@ const Landing = ({ setSelectedPage }) => {
             Contact Me
           </AnchorLink>
           <AnchorLink
-            className="rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
+            className="font-semibold rounded-r-sm bg-gradient-rainblue py-0.5 pr-0.5"
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
-            <div className="bg-deep-blue hover:text-red transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10">
+            <div className="border-solid border-2 border-cyan-500 text-white font-semibold font hover:bg-cyan-500 transition duration-500 w-full h-full flex items-center justify-center font-playfair px-10">
               Let's talk
             </div>
           </AnchorLink>
@@ -98,7 +97,7 @@ const Landing = ({ setSelectedPage }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
             visible: { opacity: 1, x: 0 },

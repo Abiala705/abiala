@@ -9,6 +9,9 @@ import Contact from "./scenes/Contact";
 import React, { useEffect, useState } from "react";
 import useMediaQuery from "./hooks/useMediaQuery";
 import Footer from "./scenes/Footer";
+import ParticlesBackground from "./scenes/ParticlesBackground";
+import ParticlesBackground2 from "./scenes/ParticlesBackground2";
+import ParticlesBackgroundc from "./components/ParticleBackgroundc";
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home");
@@ -26,39 +29,35 @@ function App() {
   }, []);
 
   return (
-    <div className="app bg-deep-blue">
+    <div className="app bg-white dark:bg-slate-800">
+      <ParticlesBackgroundc />
       <NavBar
         isTopOfPage={isTopOfPage}
         selectedPage={selectedPage}
         setSelectedPage={setSelectedPage}
       />
       <div className="w-5/6 mx-auto md:h-full">
-        {/* {isAboveMediumScreens && (
-          <DotGroup
-            selectedPage={selectedPage}
-            setSelectedPage={setSelectedPage}
-          />
-        )} */}
         <Landing setSelectedPage={setSelectedPage} />
-        <LineGradient />
-        <div className="w-5/6 mx-auto md:h-full">
-          <MySkills />
-        </div>
-        <LineGradient />
-        <div className="w-5/6 mx-auto mt-32">
-          <Projects />
-        </div>
-
-        <div className="w-5/6 mx-auto">
-          <Blog />
-        </div>
-        <LineGradient />
-        <div className="w-5/6 mx-auto mb-16">
-          <Contact />
-        </div>
-
-        <Footer />
       </div>
+
+      <LineGradient />
+      <div className="w-5/6 mx-auto md:h-full">
+        <MySkills />
+      </div>
+      <LineGradient />
+      <div className="w-5/6 mx-auto my-16">
+        <Projects />
+      </div>
+
+      <div className="w-5/6 mx-auto my-16">
+        <Blog />
+      </div>
+      <LineGradient />
+      <div className="w-5/6 mx-auto my-16">
+        <Contact />
+      </div>
+
+      <Footer />
     </div>
   );
 }

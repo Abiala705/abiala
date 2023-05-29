@@ -9,7 +9,9 @@ const Footer = () => {
           <p className="font-playfair font-semibold text-2xl text-yellow">
             ABIALA ISRAEL
           </p>
-          <p className="font-playfair">2022 ABIALA. All Rights Reserved.</p>
+          <p className="font-playfair text-yellow text-sm">
+            2023 ABIALA. All Rights Reserved.
+          </p>
         </div>
       </div>
     </footer>

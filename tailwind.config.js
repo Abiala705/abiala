@@ -1,9 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   mode: "jit",
   theme: {
     extend: {
+      backgroundImage: (theme) => ({
+        "gradient-rainbow":
+          "linear-gradient(81.66deg, #00b5ee 7.21%, #ff45a4 45.05%, #ffba00 79.07%)",
+        "gradient-rainblue":
+          "linear-gradient(90deg, #24cbff 14.53%, #fc59ff 69.36%, #ffbdoc 117.73%)",
+      }),
       colors: {
         blue: "#2cbce9",
         red: "#3386fb",
@@ -13,12 +20,7 @@ export default {
         "dark-gray": "#757575",
         "opaque-black": "rgba(0,0,0,0.35)",
       },
-      backgroundImage: (theme) => ({
-        "gradient-rainbow":
-          "linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%. #FFBA00 79.07%)",
-        "gradient-rainblue":
-          "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%. #FFBDOC 117.73%)",
-      }),
+
       fontFamily: {
         playfair: ["Playfair Display", "serif"],
         opensans: ["Open Sans", "sans-serif"],
