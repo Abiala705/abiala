@@ -62,3 +62,11 @@ input:checked + .slideBtnTg:before {
 .slideBtnTg.round:before {
   border-radius: 50%;
 }
+
+img {
+  transition: filter 0.5s;
+}
+
+.lazy-load {
+  filter: blur(5rem);
+}

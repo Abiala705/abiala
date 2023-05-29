@@ -6,8 +6,88 @@ import project4 from "../assets/Project-4.jpg";
 import project5 from "../assets/Project-5.jpg";
 import project6 from "../assets/Project-6.jpg";
 import project7 from "../assets/Project-7.jpg";
+import projectdata1 from "../assets/Project-data-1.jpg";
+import projectdata2 from "../assets/Project-data-2.jpg";
+import projectdata3 from "../assets/Project-data-3.jpg";
+import projectdata4 from "../assets/Project-data-4.jpg";
+import projectdata5 from "../assets/Project-data-5.jpg";
+import projectdata6 from "../assets/Project-data-6.jpg";
+import projectdata7 from "../assets/Project-data-7.jpg";
 
 import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+
+// const imgTargets = document.querySelectorAll("img[data-src]");
+// const loadImg = function (entries, observer) {
+//   const [entry] = entries;
+//   if (!entry.isIntersecting) return;
+
+//   // Replace src with data-src
+//   entry.target.src = entry.target.dataset.src;
+//   entry.target.addEventListener("load", function () {
+//     entry.target.classList.remove("lazy-load");
+
+//     observer.unobserve(entry, target);
+//   });
+// };
+
+// const imgObserver = new IntersectionObserver(loadImg, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: "200px",
+// });
+
+// imgTargets.forEach((img) => imgObserver.observe(img));
+
+// const options = {
+//   root: null,
+//   rootMargin: 0,
+//   threshold: 0,
+// };
+
+// const observer = new IntersectionObserver(callback);
+
+// let lazyImages = [].slice.call(document.querySelectorAll(".lazy-image"));
+
+// lazyImages.forEach((lazyImage) => {
+//   observer.observe(lazyImage);
+// });
+
+// function callback(entries, observer) {
+//   entries.forEach((entry) => {
+//     const target = entry.target;
+//     const dataSrc = target.getAttribute("data-src");
+//     if (entry.isIntersecting) {
+//       target.setAttribute("src", dataSrc);
+//       observer.unobserve(target);
+//     }
+//   });
+// }
+
+function myComponent() {
+  const targetElement = useRef(null);
+  const [isInView, setIsInView] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(onIntersection, {});
+    observer.observe(targetElement.current);
+
+    return () => observer.unobserve(targetElement.current);
+  }, []);
+
+  function onIntersection(entries) {
+    setIsInView(true);
+  }
+
+  return (
+    <div ref={targetElement}>
+      {" "}
+      {isInView ? (
+        <Project title={title} src={src} data-src={data - src} />
+      ) : null}
+    </div>
+  );
+}
 
 const container = {
   hidden: {},
@@ -33,7 +113,7 @@ const Project = ({ title, src }) => {
           expedita odit eaque animi commodi et quisquam placeat neque sapiente,
         </p>
       </div>
-      <img src={src} alt={projectTitle} />
+      <img src={src} alt={projectTitle} className="" />
     </motion.div>
   );
 };
@@ -83,17 +163,17 @@ const Projects = () => {
           <div className="flex justify-center text-center items-center p-10 bg-red max-w-[400px] text-2xl font-playfair font-semibold">
             BEAUTIFUL USER INTERFACES
           </div>
-          <Project title={"Project 1"} src={project1} />
-          <Project title={"Project 2"} src={project2} />
+          <Project title={"Project 1"} src={project1} data-src={projectdata1} />
+          <Project title={"Project 2"} src={project2} data-src={projectdata2} />
 
           {/* ROW 2 */}
-          <Project title={"Project 3"} src={project3} />
-          <Project title={"Project 4"} src={project4} />
-          <Project title={"Project 5"} src={project5} />
+          <Project title={"Project 3"} src={project3} data-src={projectdata3} />
+          <Project title={"Project 4"} src={project4} data-src={projectdata4} />
+          <Project title={"Project 5"} src={project5} data-src={projectdata5} />
 
           {/* ROW # */}
-          <Project title={"Project 6"} src={project6} />
-          <Project title={"Project 7"} src={project7} />
+          <Project title={"Project 6"} src={project6} data-src={projectdata6} />
+          <Project title={"Project 7"} src={project7} data-src={projectdata7} />
           <div className="flex justify-center text-center items-center p-10 bg-blue max-w-[400px] text-2xl font-playfair font-semibold">
             SMOOTH USER INTERFACES
           </div>
